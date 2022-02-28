@@ -1,0 +1,283 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1029.6,3167.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="1040,3102.4" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: Hospital Notifications &amp; Enquiry System" sap:VirtualizedContainerService.HintSize="996.8,3011.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="ab7c5230-d4de-4faa-ad2a-afede8e9533f" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="984.8,2789.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Login'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="941.6,216.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ab7c5230-d4de-4faa-ad2a-afede8e9533f" Text="b.topicanai@gmail.com" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://hospitals.nhif.or.ke/nhifwww-mas/hosp-app/" DesignTimeRectangle="740, 442, 254, 29" ElementType="InputBox" FriendlyName="'b.topicanai@gmail.com'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="ccabcbfc-578c-4dc8-8f09-02fd3adcbb08" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQIAAAAhCAYAAAAyAKV8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPHSURBVHhe7Zg7buswEEW9J3dZihaQNaTzFtKl1gZSpjeQ0n0CpImr1wSp4iIVH8XvUByKI8FyZPkeYACbEucjzlwL3pxOJwWDwW7bghAcDgcYDHaDlgkBAOC2gBAAACAEAAAIAQBAAyEAAEAIwPLZPLxNMiAHQgAWDzfkEgNyIARg8XBDLjEgZ0AIjqpttmq71bbbu7WFsd/Z/LQtMsWl5zeGfi3HVjUXqo0bcokBOTMJwYVE5NqFgFwPtshCNBCCVXPdQnC17NXODNFOf0rZ77r1RrVHt7BUIASrQiwEx7axnwsNHCH7qNFuYX4J02aisduePxK71IyM/8ZMViG3ptVXPNK6Bb7Y/Ny+JGaKjVkSCcaCLy8wtl56v41Pc6ZiM6GWMUJQPA9HpR82D//Ui/v88fqp7t/dF83Lczf0n+rxyy2oX/X4BCEYi0wItPmDC8010MjJ3l6XhMEK++O9sTn4hs1iM83I5qcbLWm8AInD5NOZ3VeuJ8L4YvKz9fua4uAGM3utL5pzHOooEHmtqT8TMxkyG7d+hoJahEJQOw9JP1Ah6DDD//zjvnXY4Q8C8fWt7iAEoxC/EQRCYw29vhb2kkZNl/s+hbEnNicl/uL7AeNj14eH8ZXl43zbZF0cH9c9G+ffxGOGkBWHkFP6RmBgnklec061Fsmzrt4j64f+G4F59X/6Vh9uzb4VvKm711+38qPuIQSjGC8EkgYo7Q0HXDp4vy6M3f+eCQoH8Z3YFCGo+MqelW18M6T+WoiRCoEdROen8NzOKwQja2H8ZtTOQ9gPEIL5uS0hIPf7QcmHgo+dDZ3EV/asRgqBj1Wo62xCMKUWxm9G7TyE/QAhmJ/xQpAdLrkvNGRhL2lU/uAZn0OxRzZnPvTcmkwIRL6yfJxvm6z93B9i853epynUdS4hmFRLqbZuzedTyDsi6wcIwfyMFIJ4cHGNaQBN3qSW0GBhPe4PzUt9DsVmGo2NqxvL+M4Eh9wfhoCLzfiV+CoOYX49t+g3yWnwGU8Tgkm1ZH5H9IE/D42kHyAE8yMTgr6RASk1AG3KbE9ovGiJy4HYUSw0TJN3xEbP9/WvNU1vKGhs4pRr6KovNj/3XNKCBQycR8hpohAka25/rRahEHQMnYeh0g8QgvkZEIK/hB/G1RCGKA7iFII4rfEZEczgTzAgB0Lwh3C/lP1f0yLs28Y64YZcYkAOhOBKYEUj+R9hvXBDLjEgZ6FCAAC4JBACAACEAAAAIQAAaCAEAABeCGAw2O1ZIgQwGOx2DUIAg8EgBDAY7KT+Ay0v+pWPzYuMAAAAAElFTkSuQmCC" InformativeScreenshot="449d61f18750de034d614943d36aa899.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='webmaster' title='Hospital Notifications &amp;amp; Enquiry System' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="664, 441, 73, 32" ElementType="Text" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;form&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' type='' aaname=' Login: ' check:text='Login:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE0AAAAkCAYAAADM8rciAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAElSURBVGhD7ZbLDcMgEETpin7ohmrohV44b+IPgWywLEZ2YpM5PMlmMBIPFmNSSkL6oDQASgOgNABKA6A0AEoDoDQASgOgNABKA1DSonhrxPpYtR1I9GKNFR8b2Y34rrRBoDQAQNrSx5gVF1QexOVsKsUwlaSTMGV1eebnOS/juZDHue4Cdkpbhb1E6fdFWPk+C9yS9syslzj3TRK9LX0vTJ+04D4nVbc18jcRDWllZ6k8t12QfmnVzpipJjoLauZb0pQgSqvzf5emJ7VTnm9tfyltzY/7EQwk7XWdqCgiVJ+9K4dHd9reAv4OJe0EWufgzTlW2seZp8t3DA7facu9LJfneMImzi/PAaE0AEoDoDQASgOgNABKA6A0AEoDoDQASusmyQOEhqSa7bbfgwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="941.6,216.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="ab7c5230-d4de-4faa-ad2a-afede8e9533f" Text="don2022" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://hospitals.nhif.or.ke/nhifwww-mas/hosp-app/" DesignTimeRectangle="740, 476, 254, 30" ElementType="InputBoxPassword" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='' /&gt;" Guid="a9906eaa-2e58-41d9-8bca-18484d28c789" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQIAAAAiCAYAAAC0lNfSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACASURBVHhe7dTBCYBAEARB849t09n3OS9BNIOpgk6hr909krp7RjAzkgr7jADoYgSAEQBGAIQRAEYAGAEQRgAYAWAEQBgBYASAEQBhBIARAEYAhBEARgAYARBGABgBYARAGAFgBIARAGEEgBEARgDE7wgk9fUagaTejECSEUjacwPbJLkJUojWyQAAAABJRU5ErkJggg==" InformativeScreenshot="f0e2b8fe1c73761ae87c1f3e76ed027c.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='webmaster' title='Hospital Notifications &amp;amp; Enquiry System' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="664, 475, 73, 32" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;form&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' aaname=' Password: ' check:text='Password:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE0AAAAkCAYAAADM8rciAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHnSURBVGhD7ZZRbsMgDIZzK+7DbThN7sJd8szAYGJTL208dVKr/+GTVjuA+TBo23EcBdwD0hxAmgNIcwBpDiDNAaQ5gDQHkOYA0hxAmgNIc7BIyyWFrWybRSgpy2+/jD3WPcayW7kFU1pIWcQ6OYWXJ/1I3iHtOPYSa8fFfY1/Cf8iLacS1PVdxhl5JfzXvFEDbUiP32MdE/fxe3lWZrxC68SS6Ka0PIvp++mx+vQkKe3Kww1pVOSyoNyEur5U6PIGDkk05kme5gqp5JFra4cQRF29Tin5QSD/HvMqkaP+cz4W+IdOmyemEBPmPDc0kSLo74sCbuVbTaMTWKTMW9dKxuhbfcDWmDtv9o3raTCuzcnZPb0zB+qUX8n3OmZXkqzWDX1TqhNbDaIrCRIlD1B39drJ55i3SuN2FsUYxelvG1ZRdn6+WU0KSWWRS40fI80qlLrOksZ0OeqaXOXHGqnK4xhtNsb6nVjHWpdiQ4B1mDJ/FfsFvzRZCBXWOmXErAJk8c/yFDO6mcbVmDqwXvN5xZffljSee47htd4praLeJCrK6JSZ52/EHM/yFVpDCeprPNY3RPFcU0bFlNZgUY2a9//LAV4B0hxAmgNIcwBpDiDNAaQ5gDQHkOYA0hxAmgNIcwBptznKD2JqnnhHsYQPAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="941.6,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ab7c5230-d4de-4faa-ad2a-afede8e9533f" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://hospitals.nhif.or.ke/nhifwww-mas/hosp-app/" DesignTimeRectangle="1000, 479, 27, 25" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='OK' check:text='OK' /&gt;" Guid="952e6330-0e94-4bca-8b0d-4c7a2836d9fc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAdCAYAAABSZrcyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADnSURBVEhL7ZTNEYQgDEapiGIohQqsgUZoxHY4Z5dV5IsEdGf8m5HDu0DICwRQIQS6i0U+DMNliPJxHE+ny7v8gXJvSStFiqHJeoiZ8VYvMcbhnCMD67X123Jn0gJDTkpk3BIbkeWerE55JnEcb8rru/jiTJGstgbHMLYhx2PCXSfk+UIORa5PqS7HPmtLHhZN4FHm/nM5FCjk2CdfVZzI90GWM4Qcp+48CnOB5b2py4/qOYvjz7MhlxIBf9x2/k/kQpvyyDHvfNWOuY2b8h+H/HD8o4kF7JOfRJd3+TPkV1HI7+Ct8kAfgX/LoPgV+1UAAAAASUVORK5CYII=" InformativeScreenshot="8d0cc01bf76b7d70a1c9d4866fef81c8.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='webmaster' title='Hospital Notifications &amp;amp; Enquiry System' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Member Enquiries'" sap:VirtualizedContainerService.HintSize="941.6,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ab7c5230-d4de-4faa-ad2a-afede8e9533f" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://hospitals.nhif.or.ke/nhifwww-mas/hosp-app/index.html" DesignTimeRectangle="962, 347, 388, 45" ElementType="Text" FriendlyName="'Member Enquiries'" FullSelectorArgument="&lt;webctrl aaname=' Member Enquiries' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Member Enquiries' tag='A' type='' check:text='Member Enquiries' /&gt;" Guid="b03402a0-0c31-44c0-b0e2-3529dc6e3c40" ImageBase64="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" InformativeScreenshot="3c0f0267c409abe92c198bf3fb9a6fbe.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='webmaster' title='Hospital Notifications &amp;amp; Enquiry System' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NSelectItem DisplayName="Select Item 'Card No'" sap:VirtualizedContainerService.HintSize="941.6,156" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="ID/PP No" ScopeIdentifier="ab7c5230-d4de-4faa-ad2a-afede8e9533f" Version="V1">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="2">
+                  <x:String>Card No</x:String>
+                  <x:String>ID/PP No</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://hospitals.nhif.or.ke/nhifwww-mas/hosp-app/member/meminfo.html" DesignTimeRectangle="54, 321, 116, 25" ElementType="DropDown" FriendlyName="'Card No'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="e9777c0e-b347-402e-a9da-bf2780567959" ImageBase64="" InformativeScreenshot="572adfa07dd00729f33116e7589f0761.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='webmaster' title='NHIF Member Information' /&gt;" SearchSteps="FuzzySelector" />
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="941.6,1595.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" TemplatePath="D:\Joel\Downloads\Bot_Data.xlsx" WorkbookPath="D:\Joel\Downloads\Bot_Data.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="929.6,1320.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelForEachRow DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="886.4,1228" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_1" Range="[Excel.Sheet(&quot;Data&quot;).Range(&quot;C:C&quot;)]" SaveAfterEachRow="True">
+                      <ueab:ExcelForEachRow.Body>
+                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                          <ActivityAction.Argument1>
+                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="ID_Number" />
+                          </ActivityAction.Argument1>
+                          <ActivityAction.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument2>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence sap:VirtualizedContainerService.HintSize="874.4,1038.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type in form field" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="831.2,216.8" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="ab7c5230-d4de-4faa-ad2a-afede8e9533f" Text="[ID_Number.ByField(&quot;IDENTIFICATION&quot;)]">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://hospitals.nhif.or.ke/nhifwww-mas/hosp-app/member/meminfo.html" DesignTimeRectangle="180, 320, 223, 27" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="8a169f43-80c6-4813-b652-ca7cd4169219" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOMAAAAfCAYAAAAV3nouAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADfSURBVHhe7d2xbcMwFEVRARkig2gEA54jXsCDBJ4lE3gEARkhgSsXaVWlYELaKRTIpaRXnA+chiDLC7Aiu/I7u9dreT5eSvfyAaxsf7r3V2P8WxyGAdhAa/B/jOM4AisSI4QQI4QQI4R4GGPf97MHgGWIEUKIEUKIEUKIEUKIEUKIEUKIEUKIEUKIEUKIEUKIEUKIEUKIEUKIEUKIEUKIEUKIEUI8jHFuM7AcMUIIMUKISYxPh9sT43URWNfb+b3112L01wZsZ/LXxufXdwtybiOwrHozbf3VGI0xW08pPx4Sjo5P3Ke/AAAAAElFTkSuQmCC" InformativeScreenshot="67b932e64884121f1021f66899d3f0cc.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='webmaster' title='NHIF Member Information' /&gt;" SearchSteps="FuzzySelector, Image" />
+                              </uix:NTypeInto.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTypeInto>
+                            <uix:NClick ClickType="Single" DisplayName="Click Submit" sap:VirtualizedContainerService.HintSize="831.2,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ab7c5230-d4de-4faa-ad2a-afede8e9533f">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://hospitals.nhif.or.ke/nhifwww-mas/hosp-app/member/meminfo.html" DesignTimeRectangle="409, 321, 52, 25" ElementType="Button" FriendlyName="'Query'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Query' check:text='Query' /&gt;" Guid="9849dfea-a6fb-4f88-b46d-f9d3d6d352a5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAdCAYAAAD/56+bAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFzSURBVFhH7ZTrsYQgDEatiGIohQqsgUZoxJ5yfUD2CwLG/eFVVmbOzI5mSQ4kDtT5YsFxHLsiLSE4TVMXvIJP5xV8Oq/g09EJBkdmGGgQGHIBYm7KoaC3SciS5z96sknUeo69I03B4EyUG8j67M/e8jvjgnx3IxqCgZyJtyRuLwG3aByF6rNaF8yUWh/+J2qYO4UPfP792TMfFdlddUFMLpIm8ABSEr0gF9uMwxzAMhZQn+gg7qytJp1gZc72p6gUhL1F60Pbb8/lDXJchPct5Yrx/3ODIFJDI5jfFuZPB1cXxGLz2VkpyZwX3H28BAeC8H5t07Qv5G4IfvMVhYJagor23zgSlLPsYh6cyabgwq64FbipLHEpvvSsenhRXtWiK9hpC1inQnAFT5xJfZ+TJ0Rk8vK+GKcRxAPcx+kEGV3Cq/kI7g/9pCC2Vu0Gr6Y+LgunBRdwfjay1rsQbM/SF/krwSfxu4I9kRYL9rpewWcvoj9An6o0z+jo5AAAAABJRU5ErkJggg==" InformativeScreenshot="599c4c883b2fe846b01a371db2f60e4c.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='webmaster' title='NHIF Member Information' /&gt;" SearchSteps="FuzzySelector, Image" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Membership: CURRENT.'" sap:VirtualizedContainerService.HintSize="831.2,492.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="ab7c5230-d4de-4faa-ad2a-afede8e9533f" Version="V1">
+                              <uix:NCheckState.IfExists>
+                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,276" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:String" Default="[Excel.Sheet(&quot;Data&quot;).Cell(&quot;D1&quot;)]" Name="Period" />
+                                    <Variable x:TypeArguments="x:String" Default="[Excel.Sheet(&quot;Data&quot;).Cell(&quot;E1&quot;)]" Name="Employer" />
+                                    <Variable x:TypeArguments="x:String" Default="[Excel.Sheet(&quot;Data&quot;).Cell(&quot;F1&quot;)]" Name="Amount" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[Excel.Sheet(&quot;Data&quot;).Range(&quot;D:F&quot;).DataTableOutValue]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Period' ReferenceIdx='0' Name='Period'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Employer(s)' ReferenceIdx='1' Name='Employer(s)'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Amount' ReferenceIdx='2' Name='Amount'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Period' attr='text' /&gt;&lt;column name='Employer(s)' attr='text' /&gt;&lt;column name='Amount' attr='text' /&gt;&lt;/extract-table&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="359.2,156" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="1" ScopeIdentifier="ab7c5230-d4de-4faa-ad2a-afede8e9533f" Version="V1">
+                                    <uix:NExtractData.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="45, 891, 300, 99" FriendlyName="'Period Employer(s)'" FullSelectorArgument="&lt;webctrl parentid='con-summary' tag='TABLE' /&gt;" Guid="7cbe68f8-00f9-468c-b168-ce6f8674c221" InformativeScreenshot="691251dcf8ec20263c8bef666802e817.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='webmaster' title='NHIF Member Information' /&gt;" SearchSteps="Selector" />
+                                    </uix:NExtractData.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NExtractData>
+                                </Sequence>
+                              </uix:NCheckState.IfExists>
+                              <uix:NCheckState.IfNotExists>
+                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,111.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </uix:NCheckState.IfNotExists>
+                              <uix:NCheckState.Target>
+                                <uix:TargetAnchorable BrowserURL="https://hospitals.nhif.or.ke/nhifwww-mas/hosp-app/member/meminfo.html?ntype=ID%2FPP+No&amp;number=13268151" DesignTimeRectangle="53, 519, 1047, 33" ElementType="Text" FriendlyName="'Membership: CURRENT.'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;p' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='P' check:text='Membership: CURRENT. Contributions: OK.  This member is COVERED' /&gt;" Guid="01076a76-52df-44a7-a869-af54e8fb587b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABBsAAAAlCAYAAAADfeEKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABYmSURBVHhe7Z3dy79fNsd/pYiiiNFMnooaUZ6KmhnlITkRSU5EOfCUEycOcCCSOZikSU40MUmkHCAHmJFpUhMRSg5wwJFy5F/42i/uV61W63r6fD737f7NvL/16ntf+3Httde+9tr72tf1eevN+vfWf78VQgghhBBCCCGEcDf/u8+QzYYQQgghhBBCCCE8imw2hBBCCCGEEEII4aFksyGEEEIIIYQQQggPJZsNIYQQQgghhBBCeCjZbAghhBBCCCGEEMJDyWZDCCGEEEIIIYQQHko2G0IIIYQQQgghhPBQstkQQgghhBBCCCGEh3Jus+E7F2898RtPYVu8Z2HaKf4lQMYzsv5/cEU20/5UCXsJPr547+IzF/bluxcfXEzpTTPFCW0gTW13tasJ6v+OxT8vall/tZjSV75kMcl7VKd82cI8yv41JWyi56vlHXGLrf7n4mcXtNVy0Nl3L7rOnptPLH6ihW1h/9EXhtkvNd2jmGSjn56rvpfkvxa/vOg28HWLP11MeSb9d+yPr1hgZ1OaLZTjDNo9/VHHzh7KRjum+E927L+XnhcmnnMc/e4CO/70BXV82tP1Hyym9IK9opvPXZAPPnvBXMK9oKf/wgVp/r6ETfzTgnTa6Zl5SOr9fYqvIDf3dca2ecB56Azm2ZMRvTKvf2hR6wkhhBAeyPXNhj0H9d8XdTKb0rwELtJvWcA9N1dkM+1LOpXfv6BOFiw/svi1xc8t3rEgfOp/wqGHV3SUaru1qx9aUE/l/YuvXhD/OYt/XZhPB+rzFz0fILcOateddX79gkX5Fj++ME918n7+KWyC+Lpg6mVSJ2m+vITJny1qWUf85QK9UB4OOPqi7TjUOOVAminvc4Ace/eGiv1X09svNd2jmGR7zkXSS/G3i89b0A5sinGq/btRyHjui5ZJ/5UfXhDPRkMdd2fptn3G7umPOnb20FZoxxT/yY7995LzwhbPMY6w129YUC7zDu3Ervlfu95q+x8uvPfX+yK2ZjgL+ZrnRxdTeIf4ms5++KxFt+tOvb+TB5CrQ7sc0318Ekf4NI465tmTEf0wTxD/XYtaVwghhPAgrm02sLhj0urOq3xg4cTG/1Oal+DKgv6lec2y6XTR372PudYOuqNHGNSwjo7StNmwp4sfXJAG2QzTgdpbnPBk30U3m2CGn6mzo+xAeVsLsCOZ7Puuv6tQP44zsnzkKaxCGHF9k+Y5oV3odoo7g/0yxd3LvbK9RuhX+pd+/vBTWKWO176QcPxMOtHWWfA8ynbO2P2VzYZPdV7TZsNz8M0L2veTJUw4tcAmGPH9Hs7mqve96b5Y8/70UxhwooGwI/v7qgXpOOHA9Zl5aII8MMUBcnra4s+fwsCxeaXfj2RkjE86CSGEEB7Etc0Gn3j9/mJKh5PAUXMmNtJNaV4CndsrC8qX4rXKVp2Src0kFu1sJOHQ1QU8+Y76W0eptlu72tMFDiRpcIgMO+vkfduCdL9Vws7U2VF2nTLKndIdyWTf37tIsA2/XsI6ylw3aZ4T6poWr2exTVPcvdwr22vkexdHNsA41mbrPdvx03XiZvGjN6nO2D3j5mg8h//D/rv3PvIa0Va27rFg+1mQ13A3A/ZOdNVNuvrahHkpu6YXNyTwcQw7Ow91yANTnLDRQpq6AeA9/Uq/n5ERnaCPPq+HEEIID+DaZgMOK/9zNLenYZJisuKYORMb6Xoa3rXkHUHi4J2L7iw7OeJ0cFyRdy255vikkyxP8shLOE94OTZcy9BhoewfWHh8cqpPeL/fMgE5OZJZ0ygbZbzv6W/k+qMF8b19yE79dfFeZaM9Hgu1fVPa6lzolCNb1QHH5+9ZILiRxIJjihf6nvfDp2OhNV2HNpCGNhmmXdWwzuQsnXXypvLP1NlRdvpM257s6EimqT+vwjijDE4ZTfHC0zds6vtKGGAj37PQ7rSd/o0HZcVxR94tOzVdxfahC/TNPcGTGD+2sP+Isz77hVcDON7L36Tnb8JMV9PWMKnlHsnGdc0LfP+gvuvNeO7viJ/VjfCeeD2yTLp7xqv32iMbgN9ZUGfV9aR/2/Qcp2EsW91P0B+Aruo9lL/7e/b2P+0w7My9dwvKo25tz36iPMJ40kx/OY9wjH1a0J6Z38BxwT3c9NTJnILuGYtVDv6ufWL/oU/mSO2PNm+9CnBVtj5mezohPeXVsHv6wm8+/UkJm+A1C+rwlAEnAMhH/p624+sQ1R7daNuyUcKJx5YNOzsPdcgDU5xYX5VnCjvirIxuXtb2hRBCCA/g2mYDExcnFyYn91cXpGHynxwQdugJ43gu7xbzLuWXPoXVydPJkSdyODvEkdb3GL91gQNk+LsWhNd36avjTBnWZxn9uCDHjAlHHtKR3rSTc0G5pOUdS959xIni6Xktgzi/OVAdoC6b7VAXdSPHtFU/6NbTBZRPPSweLbM+mTA//WfYFj4B/esSdhbywRQntIE0VZ/aVQ3r6ATiDBl2xoGiT6YPf52ps1Nl96RF1zUcyWR/1P68inZ2yzu2LFiQG9vBbrEdFgFcE14XUMqKXUxjVjv9hwXlEMbTQf7+2II4dKGdk592s2Fp/1W7tF9I79jiVAayAXl6Wq8rtdwj2XoZlsu46veB6f5ypBtAbuQ3HTKwcCUd9lkXYNZ/ZJvawLTp26F80nLPMKzrn0WvNvAcHxY9Y/fTfU3bhGkMaxNn771bUB5zGu3v91T6iH7+yoUyEU7a2ndn5zegrUC7sAXK/aYFab92QdnfsiCc/wmvH6e1/0hHGYwT0lpfvzdclY1y+5itaSp9HN3bF/b3FLeHbazjdAvv4VWnbuDRnppWsAPss/a5/bCVZwvywBQnbrqwWWgYfUHY3jjqnJXReZaHDlN8CCGEcCPXNxuYzPm7P3ngeCEOPX93BwRH0Ym8TtbgUXffTXRyJP3fPIUB9RHe6/ZJb3UcdG5xDuoTIerGaaBsF4qe1ujHNkmLvDWtsnWnA2xHD8dp4EnpvzxdKxsOXZeNcsGwyUlXty4URGehHps3f087QTqY4o44k1dHCZkM065qmPA0kdMm6B/QvXFHDtTfLfzAWHe8rfOIWl+X3VMgfbFH2JZMMPXnVZTlljJ8F7rrm8Um4dMYOmOnQNpuZ9pqdZjB/qvp7Zc+Dh339fiyaWs66eVuhSmb126W9nS+P40NuuC9ohuPQ/cn4dgQT3z/uITZrt4/nas2YFvdSKz6Ry7axjXfR+l5H8EZu1fGnsan0HURqZ4co2fvvVtYXt3QBBd8fZHcXye8Mr+Bbe2nENjwILwv+JSjfysAul2Z1vpula2P2S1M7/U9fWG7KHOK3+Ps2BHSopca1u1KPDXR7/e1H/ag3JrP8Bom/7bw4QebXDXOcX9E1cFZnTpGu6whhBDCnVzfbMB54e+6qMWxYOLWeeoOiJPk5Ai4mNDBcnLsDh4Q/sUtDAirk6kT5/S+uoty/ud6y8GY0ipbXxCBTlY/ct1Rtu5QgrK4uWHa6oCrW9NUcFb7IvAslAlT3BFn8k42YHv34AlZ/9iX/bAH9sjrNd3ptc6jX6PQsYcuO2Wy0CSsPvXjes+pm/rzKspytQzaQ75pXIGLFBeke3aqrdcwrtFtDdNWex/YfzW9/VIXPqJs2rxpezro5W6F9XsUGy21jor3AU9EXdGNmw2/UMLu5aoN2FbvceqfzWHsWAjjyXTPfy9n7H7rvqasVdf2v+05e+/dwvL6Brp67q8bcE249wPTeV3p8xtstVU5+gaCNtT7r27ASa/vVtn6mN2ij6N7+sJ2UeYUv4e6m9o5QdoqN/jKUfcb0A/h/d6kvMy50xwiv7io+ax7D068sNFZ89mXR79GUV9xPKtTT3v0+2QIIYRwJ9c3G7jGSeVpn/E6kz756w6I+X9mwbHKyi8tiHMR5OQ4TXqE48z0cOqrk6nyTI6Hk6pPKZS1ywX8Nj9xOmPKVp0z8fgo8A4tk/7vLbrTpmzTcc+uZ9NWJ723tWL+W16FYHFO3inuCPId5Z2cXuWtP33J0V2O+37G4lcWtQyxH9hcqf3l8XTs8z8WU17rnGxji0l2T8QwDuxjrrf6Bqb+vIrHha+WoX1OX3iH3kZl3bPTuiHDNeE1HbqYXrmaxrhl1nTiYsuNnb20kxxTmOPea+x/2siELu8V3ZDXscXR9PcufnPRFxJXsK/O2oBt7ScbgE0GvkugPXNdT2s8gjN2j4zTRumerRDH9dl77xa9PFHPffFvexwr5j8zv0G3PbGcLrdyKJ86mfRJXuI8pXSLbNOY3aK35Z6+wD7JR5lT/B620z45grSMyx6ODVbfBtBHDwP74aq85IHaF74yRD2czJvyaQd746hzVkZtGj1O8SGEEMKN3LbZ0J0f4n2FAroD4vUeToZ7jhTh02RI3jqZdmewYvmWw99HmHZPNvjoon7YC/i7pt+TrevZtDU/7Zw2XKDnv4JPdm/ZqLB/pzhhc4c0td3K23XBYscyfZpcsR9qnwsf+COODYtp0bRV5x7ae8/jcVcX8FsyydSfV3FRePWbDUd19zaavrcZJjvjmvCaDl1M+rD/anrLrOmky7aXdpJjCtO+apqtvuvyXtUNi/n6gUHhuwBnF8QVF3Rnv9nAPagurGwPYXUh7Rjdur/civras/tbbKXq+My9dwvL6+HaXa0Hev9rS3vUtm219awc6mSrbbW+R8m2heXXsHv6gsU+aae4Pa58s0H99dcUgFMNxHmKwfvt9OFNy7miLyAP9HBfZ+M+0Te4QDs4o0c5K6Ont7Y2o0MIIYQbuW2zoTo7OrN1Mu4OiEcr65PQLWrZPY7w6nQK9dXJdG8x0I+O8jTz7KsHe7JV0AnvYvO0wgUG74QTtydb17Npa329rZUreu7oZPnKyBbE8+4tH/8yDKeNvNMRdFG26kTZ3kkXpNNZ7Y6X/bClB8udFk17dW6B/qc8bGboHCPjnkww9edV0DH1nXn6+EULnH7ek771ZMOkp26nwDXhNd2Wrdp/Nb1l1nTiMWaPuW+lRTeTHFMYctUy0OnVkw1ndVP5iwW69hcEple9jtAGpqetHY+GTz/Z13XCfYsyiTuzaDuL+tqz+1tsZdLx3r13C8vr4Y6JXk/v/6v33a22npVDnUz6dAx4WuFRsm1B2klmuKUv/K6MY30L7gn8KtJvP137XYXp1ZKO3wGZxp7lGOevNEz6sx+u6AvIA1OcfU2Z6G+Km/p9i7MyanvTPS2EEEK4g9s2G4DJi9MMOrO+QmEcYV67WJgmMpwKHBGO0nO950gRjiw9nPrqZLrn3OpouKj2ffDaNiENiwLfudyT7QsW9QN70mXxetJF1/PUDtrJQqM7IsAC9MoR2Irf4qD8qWzxBET9gNh0aqFCeS7Ka9lHDo7H57tM9kPt84qbAKTp71vf4lSh/608vr/thsuWTDD15y3oAE8/XSc+kfPEEc4y15ONguOgf7NhavN0P+C6j010MenD/qvppzKFNhDnZpZpvRY3ErscUxhyEe61dj0tKnzq17/ZcEY337jg1YSebtLBFRxze5uDjBnt0ldQYK9udchYnZ6u3sIZu7/HVs7ee7ewvB7uuLce6f1/ZX6DrbaelWOv/5yP3Ux/lGxbkLbKfG9fKP+0USzYtd8YqX6HY5h21fQV5gbyYt81b4X7DZtuzltbGxj2wxV9AXlgiqNOddo3hrWDIx1WzsiIHtAHba3zbAghhPAAbt9scOJjIq6vUEB3QOqEV99VZmLTQXDxatppQiV8crAot06mOjb9/WMdDSZVFyqmxbmpEy1ydodmTzafyHQH3WP9Pim0vsn563qeHDR122Wwnkm2s7iAQY7J6XDx353J+r739NN5Orz92LftnXQByOCT1vo6RbWnmr7iAhGZ6qL0qM4JdLqXx4X6kUxTf96CziH0j2cCfaDt1kWmNtrb4fHdOo6VdWpzt1Pgui8Q+rgU+49yDLPMGgbKUcO1p7rhBVtlEDbJRrjXR79GQZz3gSu68cRQ3xhS531MnKUumj78FFZh7GzpY9J/Rf2yUTHdB66ivvbs/hZbUcdn771bWF4Pd9xbj/T+V0bkP5rfYKutZ+WwPvq+tpn63Fzqae+VbQvSUobX9/YFKNd0CqvadR871IlOGBfTfZH2q589W/SBBLLy/9ZpjKrbKX4L8sAUB3XDz34E7WBP9s6RjMwV6uSRp5lCCCGEJ27fbPC44TT5dQcEnCin3/qmfNM5OU4Tak8r1FcnU51BJmvr88ODhPdFgu3zt8Fr2irHnmw6OjwpIr5+9AnnR6e9O6qVrmfT1vpoJ2US7m+0+2HEvjgw/6SzCfLqLHKig19zoHzqf8eC8Hct6gaOkIZ4ZOPoPh8G+/aFx8WnfLZ30oW4kUG5fdNny4ESndbqlFrn0a9RgE+5bduWnC7+j2Sa+lPO6KLCYtU60be/ac8HCA3vzmNdoNK+aqPYbV0gKOskT7dT4EQN5SDHx57C+rgU+6/apWVSBr/L38dPtR3zE4cuqZM8pEOOWi5syUYZNZ0yUFa/D9TNriu6qTqnPY4n9E2YNl3znrUBFgqMK/LwhXrkpXzGreOOb3vUewJM+q+QXv34hByuyifqa7J7ucVW1PHZe+8WltfDKavWI1P/m/ZofoOttp6VQ53UNtf6uJ7y3yPbFqSlHK/v7QtgzLgAZt6xnGrX/LTxVBabDNRDmnpf5H6HTIR3/XR8FYWHEntP++0H0tR5Y6L+IgV5oJbVceO/buzbj0e/RgH+IsWejO9e0C/EX/0GUAghhHCS2zcbwCd+Pbw7IMLPYTHBEQf8znz/8JKT4+QQEN6dI+gOks4gTxP5CJtOBpM0i7SaVz64eOeCdMDf/WnknmzwiUWdwHGMcLTqE6XJUZWuZ9PW+mwr7VBe6+lOkfknne3xoQXtUG/A+7E8ndpzFulfHLyaj+870MdTPts76aLihxh9D9l+qH0+QTr7wqO11nkG+0Enb09OP1C2J9PUn3JWFxUWm/Q7OiYvYAtsPmGLUx4ceeJ12k3fT6Qo6yRPt1Pg6ahl6rhqq6YR+6/apWXyMUXvEfQdstWNBsH+Gc+me9+CdNRXy4Ut2biu6QBbVZ+Uiyz9Z/yu6gbdIp/jgv8nnZv3ig0wrhiXjE/yAm1l0+njiynPpP8Oi0bL83TMLfKB+tq6b8IttlJ1fObeu4Xl9XDHfa0Htvr/zPwGW209K4c6IRy0bRbmW69W3SvbFqSlvBp2T19ItWvLcTwyP015hHrQS70v0l4W2P+4mPJ03HTfO3lkP5yh2q9htawOGx5umviqlHZwBm1zT0b6hfm6399CCCGEB3JusyG8Hq46gyGEEEIIIYQQwguTzYa3G9lsCCGEEEIIIYTwyslmw9uNbDaEEEIIIYQQQnjlZLPh7UY2G0IIIYQQQgghvHKy2RBCCCGEEEIIIYSHks2GEEIIIYQQQgghPJRsNoQQQgghhBBCCOGhZLMhhBBCCCGEEEIIDyWbDSGEEEIIIYQQQngo2WwIIYQQQgghhBDCQ8lmQwghhBBCCCGEEB5KNhtCCCGEEEIIIYTwULLZEEIIIYQQQgghhIfy5s2bN/8D1J0R6bAHhVMAAAAASUVORK5CYII=" InformativeScreenshot="87a78a20745bc6a19204c9db29dfab58.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='webmaster' title='NHIF Member Information' /&gt;" SearchSteps="FuzzySelector" />
+                              </uix:NCheckState.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NCheckState>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelForEachRow.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:ExcelForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Firefox" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADISURBVDhPYwCCv9hwbm7ulP///zOAcEZGxhRsavj5+UE0pgQIl5WVUWZAQUEBZQaIiIi8NDIyOgXCIDY2NXgNYJBV/8tg6w3BMqpY1eA3oLjhL9D9EFxYg1UNmgFMfxlYeYCYF0KXtiIMABkGl+MGqmXENIDDye0vw9dvCPzzF8IAEBtZbt48HAZ8+YLAP38iGQBkI8thMwADI4dBQSVWNSQEYjVWNfgNEJP4y2BsDMEgNhY1eA0QExOjLCGVl5dTlpTpZAD/XwDtS2mJLCir2AAAAABJRU5ErkJggg==" InformativeScreenshot="57e62062c99f67b97e32cf517ebc1886.png" Selector="&lt;html app='firefox.exe' htmlwindowname='webmaster' title='Hospital Notifications &amp;amp; Enquiry System'/&gt;" Url="https://hospitals.nhif.or.ke/nhifwww-mas/hosp-app/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </ueab:SequenceX>
+</Activity>
